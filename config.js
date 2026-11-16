@@ -11,7 +11,7 @@ window.SITE = {
   // Where leads go.
   // 0. Google Sheet (main): paste the Apps Script web app URL (ends in /exec). Every lead becomes a row and
   //    the sheet owner gets an email. Script: tools/lead-sheet.gs
-  sheetUrl: "",
+  sheetUrl: "https://script.google.com/macros/s/AKfycbx1gRBnfR9ieKkUEltr1bEdogouD0FVnzKiCQSqCwEvW-SaBhGwuySLRu3DjAfDxW5RXw/exec",
   // 1. Or paste a Web3Forms access key here and every lead is emailed to the inbox that key belongs to.
   //    (The key is made at web3forms.com with your email. It is safe to keep in this file: it can only send to you.)
   // 2. While this is empty, the live form hands the lead to WhatsApp with the details already typed.
