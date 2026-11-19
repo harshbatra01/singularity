@@ -24,7 +24,7 @@ window.SITE = {
 
   // Visit tracking (track.js). Visits go to the same Google Sheet web app as leads (sheetUrl), "Visits" tab.
   // Microsoft Clarity project id (clarity.microsoft.com > Settings > Setup). Empty = Clarity off.
-  clarityId: "",
+  clarityId: "zg0dzmjji2",
   // Quick phone ping with no setup (ntfy.sh). Open https://ntfy.sh/<this name> on the phone, or subscribe in the ntfy app.
   // Public in this file, so it only carries page, source and device. Set to "" once the sheet's private ping works.
   quickPingTopic: "ss-aa1bdbb70be57b14dbc3",
