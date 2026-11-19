@@ -22,6 +22,14 @@ window.SITE = {
   email: "harsh62442@gmail.com",
   callUrl: "https://calendly.com/harsh62442/30min",
 
-  // Local test only: tools/serve.py saves leads to leads/leads.jsonl
-  localLeadEndpoint: "/api/lead"
+  // Visit tracking (track.js). Visits go to the same Google Sheet web app as leads (sheetUrl), "Visits" tab.
+  // Microsoft Clarity project id (clarity.microsoft.com > Settings > Setup). Empty = Clarity off.
+  clarityId: "",
+  // Quick phone ping with no setup (ntfy.sh). Open https://ntfy.sh/<this name> on the phone, or subscribe in the ntfy app.
+  // Public in this file, so it only carries page, source and device. Set to "" once the sheet's private ping works.
+  quickPingTopic: "ss-aa1bdbb70be57b14dbc3",
+
+  // Local test only: tools/serve.py saves leads to leads/leads.jsonl and visits to leads/visits.jsonl
+  localLeadEndpoint: "/api/lead",
+  localTrackEndpoint: "/api/track"
 };

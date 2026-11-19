@@ -286,7 +286,8 @@
     if (!c) { setErr(contact.value.trim() ? "That does not look like an email or a phone number." : "Add an email or a WhatsApp number so we can reach you."); contact.focus(); return; }
     var d = {
       style: sel.value, contact: c.value, kind: c.kind, note: note.value.trim(),
-      page: location.href.split("#")[0], at: new Date().toISOString()
+      page: location.href.split("#")[0], at: new Date().toISOString(),
+      ref: (window.SS_TRACK && window.SS_TRACK.ref) || ""
     };
     setErr("");
     sendBtn.disabled = true; sendBtn.textContent = "Sending…";

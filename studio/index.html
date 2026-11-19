@@ -1005,6 +1005,8 @@ Object.keys(LIGHT).forEach(k=>document.documentElement.classList.toggle('l-'+k,L
 document.documentElement.dataset.foot='list'; document.documentElement.dataset.tile='cover';
 layout(); aimLight(); drawBackdrop(); buildBeam(); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>{ layout(); aimLight(); drawBackdrop(); buildBeam(); }); requestAnimationFrame(frame); requestAnimationFrame(lightLoop);
 </script>
+<script src="../config.js"></script>
+<script src="../track.js"></script>
 
 </body>
 </html>
