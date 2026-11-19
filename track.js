@@ -77,9 +77,11 @@
     quickPing(d);
     if (!url) return;
     var body = JSON.stringify(d);
-    // fetch with credentials "omit", not sendBeacon: a beacon carries the visitor's Google cookies, and Apps Script
-    // then bounces signed-in visitors to an account page instead of running the script (seen 19 Nov).
-    // text/plain keeps it a simple request, which Apps Script web apps accept.
+    // Beacon first (tested 19 Nov: it reaches the Apps Script web app; plain fetch failed in one browser),
+    // then fetch as a fallback. text/plain keeps it a simple request, which Apps Script web apps accept.
+    try {
+      if (navigator.sendBeacon && navigator.sendBeacon(url, new Blob([body], { type: "text/plain" }))) return;
+    } catch (e) {}
     try {
       fetch(url, { method: "POST", body: body, keepalive: true, credentials: "omit", mode: isLocal ? "same-origin" : "no-cors" });
     } catch (e) {}
